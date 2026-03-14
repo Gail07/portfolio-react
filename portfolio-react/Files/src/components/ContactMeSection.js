@@ -131,11 +131,10 @@ const ContactMeSection = () => {
                 isInvalid={formik.touched.type && !!formik.errors.type}
               >
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
-                <Select id="type" name="type" {...getFieldProps("type")}>
+                <Select id="type" name="type" {...getFieldProps("type")} textColor={"gray.800"}>
                   <option value="hireMe">Freelance project proposal</option>
-                  <option value="openSource">
-                    Open source consultancy session
-                  </option>
+                  <option value="openSource">Open source contribution</option>
+                  <option value="job">Job opportunity</option>
                   <option value="other">Other</option>
                 </Select>
                 <FormErrorMessage>{getErrorMessage("type")}</FormErrorMessage>
